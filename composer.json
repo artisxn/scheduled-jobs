@@ -1,0 +1,59 @@
+{
+    "name": "codicastudio/scheduled-jobs",
+    "description": "A noobs worthless garbage, just learning.",
+    "keywords": [
+        "worthless garabage by a noob."
+    ],
+    "homepage": "https://github.com/codicastudio/scheduled-jobs",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Michael J Brown",
+            "email": "codicastudiodev@gmail.com",
+            "homepage": "https://codicastudio.dev",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.0",
+        "dragonmantank/cron-expression": "^2.2",
+        "laravel/nova": "^3.0",
+        "illuminate/console": "^7.0"
+    },
+    "require-dev": {
+        "illuminate/cache": "*",
+        "orchestra/testbench": "^3.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "codicastudio\\NovaScheduledJobs\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "codicastudio\\NovaScheduledJobs\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "codicastudio\\NovaScheduledJobs\\NovaScheduledJobsServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://nova.laravel.com"
+        }
+    ]
+}
